@@ -1,0 +1,159 @@
+<section class="content-header">
+  <h1>
+    <i class="fa fa-users"></i> Teacher Information
+
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <a href="">
+        <i class="fa fa-dashboard"></i> Home</a>
+    </li>
+    <li>Teacher Information</li>
+
+  </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+  <!-- Select Criteria -->
+
+  <!-- <div class="box box-default"> -->
+  <!--<div class="box-header with-border" >
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <h3 class="box-title">Select Criteria</h3>
+    </div>-->
+  <!-- /.box-header -->
+  <!-- <div class="box-body">
+      <div class="row"> -->
+  <!--<div class="col-md-3">
+          <div class="form-group">
+            <label>Batch Year</label>
+            <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">--Select--</option>
+                        <option>2017-2018</option>
+                        <option>2018-2019</option>
+                      </select>
+          </div>
+        </div>-->
+
+  <!-- <div class="col-md-3">
+          <div class="form-group">
+            <label>Class</label>
+            <select class="form-control select2" ng-options="class.class_id as class.name for class in classData" data-ng-change="populateSections(classId)"
+              style="width: 100%;" ng-model="classId">
+                        
+                      </select>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Section</label>
+            <select class="form-control select2" ng-options="sec.section_id as sec.name for sec in secData" style="width: 100%;" ng-model="secId">                    
+                        
+                      </select>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Search by keyword</label>
+            <input type="text" name="search_text" class="form-control" ng-model="searchstudent" placeholder="Search...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="box-footer">
+      <button ng-click="getParents(secId);" class="btn btn-primary pull-right">Search</button>
+    </div>
+  </div> -->
+
+  <!-- /.content -->
+  <div class="box box-default">
+      <div class="box-body">
+    <!-- <ul style="list-style-type:none;">
+      
+      
+          <li class="col-md-6"> -->
+
+            <table export-table st-table="display_records" st-safe-src="teacherList" class="table rwd-table" >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <!-- <th>ParentId</th> -->
+                  <th>Teacher Name</th>
+                  <!-- <th>Parent Name</th> -->
+                  <!-- <th>SchoolId</th> -->
+                  <th>User Name</th>
+                <th>Password</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr st-select-row="row" st-select-mode="multiple" ng-repeat="teachers in display_records" >
+                  <td>{{$index+1}}</td>
+                  <td>
+                    <!--  -->
+                    <a href="">{{teachers.teacher_name}} </a>
+                  </td>
+                  
+                  <td>
+                    <a href="">{{teachers.teacher_id | lowercase}}</a>
+                  </td>
+                  <td><a href="">{{teachers.teacher_id | lowercase}}</a></td>
+
+                 
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="5" class="text-center">
+                    <div class="pull-right" st-pagination="" st-items-by-page="10" st-displayed-pages="5"></div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          
+
+          <!-- </li>
+          <li class="col-md-6">
+         
+                <table export-table st-table="display_records" st-safe-src="username" class="table rwd-table">
+              <thead>
+                <tr>
+                 
+                  <th>User Name</th>
+                  <th>Password</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+                <tr st-select-row="row" st-select-mode="multiple" ng-repeat="teacher in display_records" >
+               
+                  <td>
+                    <a href="">{{teacher |  lowercase}}</a>
+                  </td>
+                  <td>
+                    <a href="">{{teacher |  lowercase}}</a>
+                  </td>
+                 
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="5" class="text-center">
+                    <div class="pull-right" st-pagination="" st-items-by-page="10" st-displayed-pages="5"></div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          
+          </li>
+        
+     
+
+    </ul> -->
+  </div>
+  </div>
+</section>
